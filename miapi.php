@@ -10,21 +10,6 @@
 		throw new Exception('Miapi à besoin de l\'extension JSON.');
 	}
 	
-	function base64_encode_image($image) {
-        $imgtype = array('jpg', 'jpeg', 'gif', 'png');
-		
-        $filename = htmlentities($image['tmp_name']);
-		$filetype = strtolower(substr(strrchr($image['name'], '.'), 1));
-        if(in_array($filetype, $imgtype)) {
-            $imgbinary = fread(fopen($filename, 'r'), filesize($filename));
-        }
-		else {
-           throw new Exception('Votre image doit être au format .jpg, .gif ou .png.');
-		   die();
-        }
-        return 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
-    }
-	
 	class Miapi {
 		protected $uid;
 		protected $secret;
