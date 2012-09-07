@@ -3,7 +3,7 @@
 * API de Miapi
 * @auteur : XAttax
 * @version : 0.5
-* @documentation : http://miapi.olympe.in/api/documentation
+* @documentation : http://miapi.dzv.me/api/documentation
 **/
 	
 	if(!function_exists('json_decode')) {
@@ -14,7 +14,7 @@
 		protected $uid;
 		protected $secret;
 		
-		const MIAPI_GESTION_URL = 'http://miapi.olympe.in/api/gestion.php';
+		const MIAPI_GESTION_URL = 'http://miapi.dzv.me/api/gestion.php';
 		
 		/**
 		* Envoie les données à l'hydrateur
